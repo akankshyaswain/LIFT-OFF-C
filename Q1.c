@@ -1,16 +1,14 @@
 #include <stdio.h>
 int main() {
- int x, y, sum,sub, mul;
- float div; 
- printf("enter 2 nos:");
- scanf("%d %d", &x,&y);
- sum=x+y;
- sub=x-y;
- mul=x*y;
- div=x/y;
-printf("addition is : %d \n",sum );
-printf("subtraction is : %d \n ", sub);
-printf("multiplication is : %d \n ",mul);
-printf("division is : %f \n", div); 
-
+   int n,sum=0,m;    
+printf("Enter a number:");    
+scanf("%d",&n);    
+while(n>0)    
+{    
+m=n%10;    
+sum=sum+m;    
+n=n/10;    
+}    
+printf("Sum is=%d",sum);    
+return 0; 
 }

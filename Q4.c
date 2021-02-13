@@ -1,41 +1,36 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <stdio.h>
-int main() {
-     int phy, chem, bio, math, comp, total; 
-    float per; 
+#include <string.h>
+ 
+int main()
+{
+  int a[50],i,n,large,small;
+printf("\n Enter the number of elements : ");
+scanf("%d",&n);
+printf("\n Input the array elements : ");
+for(i=0;i<n;++i)
+scanf("%d",&a[i]);
 
-    
-    printf("Enter five subjects marks: ");
-    scanf("%d%d%d%d%d", &phy, &chem, &bio, &math, &comp);
-      total=phy+chem+bio+math+comp;
-       per = total / 5.0;
+large=small=a[0];
 
-    printf("\nPercentage = %f\n", per);
+for(i=1;i<n;++i)
+{
+if(a[i]>large)
+large=a[i];
 
+if(a[i]<small)
+small=a[i];
+}
 
-    /* Find grade according to the percentage */
-    if(per >= 90)
-    {
-        printf("Grade A");
-    }
-    else if(per >= 80)
-    {
-        printf("Grade B");
-    }
-    else if(per >= 70)
-    {
-        printf("Grade C");
-    }
-    else if(per >= 60)
-    {
-        printf("Grade D");
-    }
-    else if(per >= 40)
-    {
-        printf("Grade E");
-    }
-    else
-    {
-        printf("Grade F");
-    }
+printf("\n The smallest element is %d\n",small);
+printf("\n The largest element is %d\n",large);
 
+return 0;
 }
